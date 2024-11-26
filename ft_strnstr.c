@@ -10,29 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-
-static size_t	ft_strlen(const char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-static int	ft_strncmp(const char *s1, const char *s2, size_t size)
-{
-	size_t	i;
-
-	i = 0;
-	while (i < size && s1[i] && s1[i] == s2[i])
-		i++;
-	if (i == size)
-		return (0);
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-}
+#include "libft.h"
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {

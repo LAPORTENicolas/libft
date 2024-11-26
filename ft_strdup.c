@@ -10,21 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
-char	*ft_strdup(char *src)
+char	*ft_strdup(const char *src)
 {
 	int		i;
 	char	*val;
@@ -41,10 +29,3 @@ char	*ft_strdup(char *src)
 	val[i] = '\0';
 	return (val);
 }
-/*
-int	main(int ac, char **av)
-{
-	printf("ft=%s\n", ft_strdup(av[1]));
-	printf("og=%s", strdup(av[1]));
-	return (0);
-}*/

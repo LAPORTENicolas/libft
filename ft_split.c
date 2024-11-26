@@ -10,11 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
-static int	ft_next(char *str, char c)
+static size_t	ft_next(char *str, char c)
 {
-	int	j;
+	size_t	j;
 
 	j = 0;
 	if (*str == c)
@@ -38,24 +38,6 @@ static int	ft_next(char *str, char c)
 		}
 	}
 	return (j);
-}
-
-static char	*ft_strndup(char *src, int n)
-{
-	int		i;
-	char	*val;
-
-	i = 0;
-	val = malloc(sizeof(char) * n + 1);
-	if (val == NULL)
-		return (NULL);
-	while (src[i] && i < n)
-	{
-		val[i] = src[i];
-		i++;
-	}
-	val[i] = '\0';
-	return (val);
 }
 
 static void	ft_abort(char **split, int size)

@@ -11,9 +11,8 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdlib.h>
 
-void	ft_abort(t_list *lst, void *last, void (*del)(void *))
+static void	ft_abort(t_list *lst, void *last, void (*del)(void *))
 {
 	ft_lstclear(&lst, del);
 	del(last);

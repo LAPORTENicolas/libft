@@ -10,8 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
-#include <stdlib.h>
+#include "libft.h"
 
 static int	is_inside(const char c, const char *set)
 {
@@ -19,36 +18,6 @@ static int	is_inside(const char c, const char *set)
 		if (*set++ == c)
 			return (1);
 	return (0);
-}
-
-static size_t	ft_strlen(const char *s)
-{
-	size_t	i;
-
-	i = 0;
-	if (s == NULL)
-		return (0);
-	while (s[i])
-		i++;
-	return (i);
-}
-
-static char	*ft_strndup(const char *s, size_t n)
-{
-	size_t	i;
-	char	*res;
-
-	res = malloc(sizeof(char) * (n + 1));
-	if (res == NULL)
-		return (NULL);
-	i = 0;
-	while (i < n)
-	{
-		res[i] = s[i];
-		i++;
-	}
-	res[i] = '\0';
-	return ((char *)res);
 }
 
 char	*ft_strtrim(const char *s, const char *set)
@@ -68,21 +37,3 @@ char	*ft_strtrim(const char *s, const char *set)
 		s_s--;
 	return (ft_strndup(&s[i], s_s));
 }
-/*
-MKO 24: mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
-MKO 28: mcheck(s, strlen("tripouille") + 1); free(s); showLeaks();
-MKO 48: mcheck(s, 2); free(s); showLeaks();
-*/
-/*
-#include <stdio.h>
-int	main(void)
-{
-	printf("test strtrim\n");
-	char *s;
-
-	s = ft_strtrim("   xxx   xxx", " x");
-	printf("res %li\n", ft_strlen(s));
-	printf("res %li\n", ft_strlen("tripouille"));
-	free(s);
-	return (0);
-}*/

@@ -1,18 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_libft.h                                         :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nlaporte <nlaporte@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/09 17:14:20 by nlaporte          #+#    #+#             */
-/*   Updated: 2024/11/09 17:14:21 by nlaporte         ###   ########.fr       */
+/*   Updated: 2024/11/26 20:41:03 by nlaporte         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stddef.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
@@ -55,6 +57,7 @@ char	*ft_strtrim(const char *s, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
 char	*ft_strnstr(const char *find, const char *to_find, size_t size);
 char	*ft_strdup(const char *s);
+char	*ft_strndup(const char *s, size_t n);
 
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
@@ -64,7 +67,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t elementCount, size_t elementSize);
 void	*ft_memset(void *s, int c, size_t n);
-void	*ft_memchr(const void *s, int c, int size_t);
+void	*ft_memchr(const void *s, int c, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 

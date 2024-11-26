@@ -10,17 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-static size_t	ft_strlen(char *str)
-{
-	size_t	i;
-
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
@@ -45,18 +35,3 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	}
 	return (size);
 }
-/*
-int main(int ac, char **av)
-{
-	char src[] = "Test strlcat";
-	char src2[] = "Test strlcat";
-	char dest[100] = "lol";
-	char dest2[100] = "lol";
-	int size = atoi(av[2]);
-
-	printf("-FT size = %u\n", ft_strlcat(dest, av[1], size));
-	printf("dest = %s\n\n", dest);
-	printf("-OG size = %u\n", strlcat(dest2, av[1], size));
-	printf("dest = %s\n", dest2);
-	return (0);
-}*/

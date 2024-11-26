@@ -10,21 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stddef.h>
-#include <stdint.h>
-
-static void	*ft_memset(void *s, int c, size_t n)
-{
-	size_t			index;
-	unsigned char	*mem;
-
-	mem = (unsigned char *)s;
-	index = 0;
-	while (index < n)
-		mem[index++] = (unsigned char)c;
-	return (s);
-}
+#include "libft.h"
 
 void	*ft_calloc(size_t elementCount, size_t elementSize)
 {

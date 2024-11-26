@@ -10,9 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <unistd.h>
 
-void	ft_putstr_fd(char *s, int fd)
+static unsigned int	ft_strlen(char *s)
 {
-	write(fd, s, ft_strlen(s));
+	unsigned int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}
+
+int	ft_putstr_fd(char *s, int fd)
+{
+	if (s == NULL)
+		return (ft_putstr_fd("(null)", 1));
+	return (write(fd, s, ft_strlen(s)));
 }

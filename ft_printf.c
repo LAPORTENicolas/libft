@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdarg.h>
 #include "libft.h"
 
 int	ft_format_p(void *ad, int fd, int suffix)
@@ -38,6 +39,8 @@ int	ft_parse(const char *format, unsigned int len, va_list args)
 		size += ft_printhex2(va_arg(args, unsigned int), 1, "0123456789abcdef");
 	else if (format[len] == 'X')
 		size += ft_printhex2(va_arg(args, unsigned int), 1, "0123456789ABCDEF");
+	else if (format[len] == 'f')
+		size += ft_printfloat_fd(va_arg(args, double), 1);
 	else if (format[len] == '%')
 		size += ft_putchar_fd('%', 1);
 	return (size);

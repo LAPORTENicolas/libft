@@ -58,7 +58,7 @@ int	ft_printfloat_fd(double n, int fd)
 	while (i < 8)
 	{
 		n *= 10;
-		printable = (int)n%10;
+		printable = (int)n % 10;
 		ft_printf("%i", printable);
 		i++;
 	}

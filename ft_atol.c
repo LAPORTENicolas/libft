@@ -25,7 +25,7 @@ static long	get_num(const char *nptr)
 	return (r);
 }
 
-long	ft_atoi(const char *nptr)
+long	ft_atol(const char *nptr)
 {
 	long	sign;
 

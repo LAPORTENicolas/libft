@@ -29,9 +29,19 @@ static int	check_len(char *s)
 	if (!split || !*split || !split[0] || !split[1])
 		return (-1);
 	if (ft_strlen(split[0]) >= 9)
+	{
+		free(split[0]);
+		free(split[1]);
+		free(split);
 		return (-1);
+	}
 	if (ft_strlen(split[1]) > 6)
+	{
+		free(split[0]);
+		free(split[1]);
+		free(split);
 		return (-1);
+	}
 	return (0);
 }
 

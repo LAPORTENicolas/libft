@@ -42,6 +42,9 @@ static int	check_len(char *s)
 		free(split);
 		return (-1);
 	}
+	free(split[0]);
+	free(split[1]);
+	free(split);
 	return (0);
 }
 

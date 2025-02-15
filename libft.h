@@ -81,5 +81,6 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 
 long	ft_atol(const char *nptr);
+double	*ft_atof(char *s);
 
 #endif

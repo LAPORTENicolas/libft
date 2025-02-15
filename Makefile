@@ -17,7 +17,7 @@ all: ft_printf ft_printf_compile ${NAME}
 
 ft_printf:
 	@if [ ! -d "ft_printf/" ]; then \
-		(git clone git@github.com:LAPORTENicolas/ft_printf.git ft_printf) > /dev/null 1>&1; \
+		(git clone git@github.com:LAPORTENicolas/ft_printf.git ft_printf) > /dev/null 2>&1; \
 	fi
 	@cd ft_printf && git pull > /dev/null 2>&1
 

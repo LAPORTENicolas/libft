@@ -69,6 +69,16 @@ static size_t	ft_split_size(char *str, char c)
 	return (size);
 }
 
+void	free_split(char **split)
+{
+	int	i;
+
+	i = 0;
+	while (split[i])
+		free(split[i++]);
+	free(split);
+}
+
 char	**ft_split(char *str, char c)
 {
 	char	**split;

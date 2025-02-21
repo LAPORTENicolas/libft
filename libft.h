@@ -69,6 +69,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strjoin(const char *s1, const char *s2);
 char	*ft_strtrim(const char *s, const char *set);
 char	*ft_substr(const char *s, unsigned int start, size_t len);
+char	*ft_strstr(char *str, char *to_find);
 char	*ft_strnstr(const char *find, const char *to_find, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_strndup(const char *s, size_t n);

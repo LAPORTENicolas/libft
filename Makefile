@@ -31,12 +31,7 @@ ${NAME}: ${OBJECTS}
 
 %.o: %.c
 	@${CC} ${FLAGS} -c $< -o $@
-	@$(eval count=$(shell echo $$(($(count)+1))))  # Incrémenter le compteur
-	@if ((${count} % 2 == 0)); then \
-		printf "${BLUE}\r⌛ Compilation ${BOLD}$< ${WHITE}${BLUE}to ${BOLD}$@${WHITE}${BLUE}"; \
-	else \
-		printf "${BLUE}\r⏳ Compilation ${BOLD}$< ${WHITE}${BLUE}to ${BOLD}$@${WHITE}${BLUE}"; \
-	fi
+	printf "${BLUE}\r⌛ Compilation ${BOLD}$< ${WHITE}${BLUE}to ${BOLD}$@${WHITE}${BLUE}"; \
 
 clean:
 	@rm -rf ${OBJECTS}
